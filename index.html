@@ -5,6 +5,7 @@
 <meta name="theme-color" content="#101418"><meta name="description" content="Prime XAUUSD demo trading terminal with simulated prices and virtual funds.">
 <title>Prime XAUUSD • Trading Terminal</title>
 <link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#101418;--panel:#171d22;--panel2:#1d252c;--line:#303a42;--muted:#89959e;--text:#e7edf1;--green:#20c997;--red:#ff5b69;--blue:#4da3ff;--gold:#f2c14e}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:13px Arial,Helvetica,sans-serif}button,input,select{font:inherit}button{cursor:pointer;color:inherit;border:0}.app{max-width:1000px;margin:auto;min-height:100vh;padding-bottom:65px}.top{height:54px;display:flex;align-items:center;justify-content:space-between;padding:0 14px;background:#141a1f;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}.brand{display:flex;align-items:center;gap:9px;font-weight:800;letter-spacing:.5px}.logo{display:grid;place-items:center;width:30px;height:30px;background:var(--gold);color:#111;border-radius:7px;font-weight:900}.brand small{display:block;color:var(--muted);font-size:10px;font-weight:400;letter-spacing:1.2px;margin-top:3px}.connection{font-size:10px;color:var(--green);display:flex;gap:5px;align-items:center}.dot{width:6px;height:6px;background:var(--green);border-radius:50%}.account{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;background:var(--panel);border-bottom:1px solid var(--line)}.account label{color:var(--muted);font-size:10px;display:block;margin-bottom:5px}.balance{font-size:20px;font-weight:700;font-variant-numeric:tabular-nums}.equity{text-align:right}.equity strong{font-size:14px}.market{display:flex;align-items:center;justify-content:space-between;padding:12px 14px 9px;background:var(--panel)}.symbol{font-size:16px;font-weight:700}.sub{color:var(--muted);font-size:10px;margin-top:4px}.price{text-align:right;font-size:20px;font-weight:700;font-variant-numeric:tabular-nums}.up{color:var(--green)}.down{color:var(--red)}.toolbar{display:flex;gap:5px;padding:8px 12px;background:var(--panel);border-bottom:1px solid var(--line);overflow:auto}.tf{background:transparent;color:var(--muted);padding:6px 10px;border-radius:4px;white-space:nowrap}.tf.active{background:#2a343c;color:#fff}.chartbox{background:#11171b;position:relative;padding:0 4px}.chart-head{height:27px;display:flex;align-items:center;justify-content:space-between;padding:0 8px;color:var(--muted);font-size:10px}.chart-wrap{height:270px;position:relative}canvas{display:block;width:100%;height:100%}.chart-legend{position:absolute;top:8px;left:10px;font-size:10px;line-height:1.7;color:#aab4bb;pointer-events:none}.price-strip{display:grid;grid-template-columns:1fr 1fr;gap:2px;padding:8px;background:var(--bg)}.quote{padding:10px 9px;text-align:center;border-radius:4px}.quote.sell{background:#7f303a}.quote.buy{background:#126d5a}.quote label{display:block;font-size:10px;opacity:.85;margin-bottom:4px}.quote strong{font-size:18px;letter-spacing:.2px;font-variant-numeric:tabular-nums}.quote span{font-size:10px;opacity:.85}.section{margin-top:8px;background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.section-title{height:40px;display:flex;align-items:center;justify-content:space-between;padding:0 13px;border-bottom:1px solid var(--line);font-weight:700}.section-title small{font-weight:400;color:var(--muted)}.order-form{padding:12px;display:grid;grid-template-columns:1fr 1fr;gap:10px}.field label{display:block;color:var(--muted);font-size:10px;margin-bottom:6px}.field input,.field select{width:100%;background:#101519;border:1px solid var(--line);border-radius:4px;color:var(--text);padding:10px 9px;outline:none}.field input:focus,.field select:focus{border-color:var(--blue)}.wide{grid-column:1/-1}.trade-buttons{display:grid;grid-template-columns:1fr 1fr;gap:8px}.trade-btn{border-radius:4px;padding:13px 6px;font-weight:800;letter-spacing:.4px}.trade-btn.sell{background:var(--red);color:#fff}.trade-btn.buy{background:var(--green);color:#071b15}.trade-btn small{display:block;font-size:10px;font-weight:400;margin-top:4px;opacity:.9}.tabs{display:flex;gap:0;overflow:auto;background:#141a1f;border-bottom:1px solid var(--line)}.tab{padding:12px 15px;background:transparent;color:var(--muted);border-bottom:2px solid transparent;white-space:nowrap}.tab.active{color:var(--gold);border-bottom-color:var(--gold)}.summary{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}.stat{background:var(--panel);padding:10px 13px}.stat label{display:block;font-size:10px;color:var(--muted);margin-bottom:5px}.stat strong{font-size:13px;font-variant-numeric:tabular-nums}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;white-space:nowrap;font-size:11px}th{text-align:left;color:var(--muted);font-weight:400;background:#141a1f;padding:10px 9px}td{padding:11px 9px;border-top:1px solid #273139;font-variant-numeric:tabular-nums}.empty{padding:22px;text-align:center;color:var(--muted);font-size:12px}.close-btn{background:#303a42;padding:6px 9px;border-radius:3px;font-size:10px}.close-btn:active{opacity:.7}.footer-nav{position:fixed;bottom:0;left:0;right:0;z-index:10;background:#141a1f;border-top:1px solid var(--line);display:flex;justify-content:center}.footer-inner{display:flex;width:100%;max-width:700px;justify-content:space-around}.navbtn{background:transparent;color:var(--muted);padding:9px 12px 8px;min-width:58px;font-size:10px;display:flex;flex-direction:column;align-items:center;gap:5px}.navbtn .ico{font-size:17px}.navbtn.active{color:var(--gold)}.badge{font-size:9px;padding:3px 5px;border-radius:3px;background:#4c3d1c;color:var(--gold)}.notice{padding:10px 13px;color:#b4bdc4;font-size:10px;line-height:1.5;background:#141a1f}.toast{position:fixed;top:65px;left:50%;transform:translateX(-50%);background:#26343a;padding:10px 14px;border:1px solid #40515a;border-radius:5px;z-index:20;display:none;box-shadow:0 8px 25px #0008}.view{display:none}.view.active{display:block}@media(min-width:700px){.main-grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(290px,1fr);gap:8px;padding:8px}.main-grid .section{margin-top:0}.chart-wrap{height:340px}.trade-column .section{margin-top:8px}.trade-column .section:first-child{margin-top:0}.account{border:1px solid var(--line)}.footer-nav{position:static;margin-top:8px;border:1px solid var(--line)}body{padding:0 10px}.app{padding-bottom:10px}}
@@ -189,6 +190,51 @@ td{font-size:12px;font-weight:500}
  .chart-float-controls button{min-width:65px;padding:5px 7px}
  body.chart-focus .chart-head{font-size:10px}
 }
+
+/* Crisp premium typography pass */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;font-synthesis:none}
+body,button,input,select,textarea{font-family:Inter,"Segoe UI",Arial,sans-serif!important}
+body{font-size:14px;line-height:1.5;letter-spacing:0.01px;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}
+button,input,select{font-size:inherit}
+.balance,.price,.quote strong,.stat strong,td,.equity strong,.field input,.field select,#mainPrice,#bid,#ask,#sellBtnPrice,#buyBtnPrice,#floatSellPrice,#floatBuyPrice{font-family:"Roboto Mono",ui-monospace,monospace!important;font-variant-numeric:tabular-nums lining-nums;font-feature-settings:"tnum" 1,"lnum" 1;letter-spacing:-.25px}
+.brand,.symbol,.section-title,.trade-btn,.tab,.tf,.navbtn{font-family:Inter,"Segoe UI",Arial,sans-serif!important}
+.brand{font-weight:800;letter-spacing:.15px}
+.brand small{font-weight:600;letter-spacing:1.1px}
+.account label,.field label,.stat label,.market .sub,.sub,.chart-head,.notice{line-height:1.45}
+.account label,.field label,.stat label{font-weight:600}
+.balance{font-size:23px;font-weight:700;letter-spacing:-.7px}
+.price{font-size:21px;font-weight:700;letter-spacing:-.65px}
+.quote strong{font-size:20px;font-weight:700;letter-spacing:-.65px}
+.tf,.tab{font-weight:600}
+.section-title{font-weight:700}
+.trade-btn{font-weight:800}
+th{font-family:Inter,"Segoe UI",Arial,sans-serif;font-weight:700;letter-spacing:.45px}
+td{font-weight:500}
+input,select,button{ -webkit-font-smoothing:antialiased }
+button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid #58a6ff;outline-offset:2px}
+@media(max-width:600px){
+ body{font-size:14px;line-height:1.45}
+ .brand{font-size:13px}
+ .balance{font-size:20px;letter-spacing:-.55px}
+ .price{font-size:18px;letter-spacing:-.5px}
+ .symbol{font-size:14px;font-weight:700}
+ .quote strong{font-size:18px;letter-spacing:-.45px}
+ .quote label,.quote span{font-size:10px}
+ .tf{font-size:12px;font-weight:650;padding:7px 10px}
+ .chart-head{font-size:11px}
+ .section-title{font-size:13px}
+ .field label,.account label,.stat label{font-size:10px;font-weight:650}
+ .field input,.field select{font-size:14px;font-weight:500}
+ .trade-btn{font-size:13px}
+ .trade-btn small{font-size:10px}
+ .tab{font-size:12px}
+ .stat strong{font-size:13px}
+ th{font-size:10px}
+ td{font-size:11px}
+ .navbtn{font-size:10px;font-weight:650}
+ .chart-float-controls button{font-family:Inter,"Segoe UI",Arial,sans-serif!important;font-size:12px;font-weight:800}
+}
+
 </style></head>
 <body><div class="app">
 <header class="top"><div class="brand"><div class="logo">P</div><div>PRIME <span style="color:var(--gold)">XAUUSD</span><small>TRADING TERMINAL · DEMO</small></div></div><div class="connection"><span class="dot"></span> DEMO SERVER</div></header>
