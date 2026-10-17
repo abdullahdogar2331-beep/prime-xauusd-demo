@@ -1,18 +1,19 @@
 # Prime XAUUSD Demo Trading
 
-Mobile-first installable web prototype for gold trading practice with virtual money. Not MT5; no broker, live prices, or real orders.
+Mobile-first, MT5-inspired trading-terminal web prototype for practicing with virtual funds.
 
-## Features
-- Simulated XAUUSD candlestick chart and M15/H1/H4 display modes
-- $10,000 virtual starting balance
-- Buy/Sell demo orders, lot size, optional Stop Loss and Take Profit
-- Floating/closed P&L, equity, open positions and trade history
-- Browser-local persistence, reset, PWA manifest and service worker
+## Included
+- Dark terminal layout with simulated XAUUSD candlesticks and M1/M5/M15/M30/H1/H4/D1 timeframe controls
+- Bid/Ask quote tiles and a demo Market Watch list
+- $10,000 virtual balance with Buy/Sell market practice orders
+- Lot sizes, optional Stop Loss and Take Profit
+- Open positions, floating P/L, equity, margin estimates and trade history
+- Local browser persistence, reset demo account, PWA manifest, icon and service worker
 
 ## Deploy
 1. Import this repository into Vercel.
-2. Use the default static deployment settings; no build command required.
-3. Open the HTTPS deployment on Android Chrome, then use the browser menu to install/add to Home Screen.
+2. Keep the project at the repository root and use static/default build settings; no build command is needed.
+3. After the deployment is ready, open its HTTPS URL on Android Chrome and choose **Install app** or **Add to Home screen** from the browser menu.
 
-## Limitations
-Prices are random simulations, not live market prices. Trades are stored locally in each browser and do not sync across devices. This is a web app prototype, not a native APK. No broker connection or financial advice.
+## Important limitations
+This is a practice-only prototype. XAUUSD prices are simulated, not live market data. No broker connection, real orders, account sync or native Android APK is included. Positions and history are saved only in the current browser. This is not financial advice.
