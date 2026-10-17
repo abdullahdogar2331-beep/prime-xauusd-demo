@@ -144,6 +144,51 @@ td{font-size:12px;font-weight:500}
  .chart-float-controls .float-sell{background:#e34f55}.chart-float-controls .float-buy{background:#20a889}
  body.chart-focus .toolbar{overflow-x:auto}
 }
+
+/* Premium mobile terminal refinement */
+.chart-expand{display:inline-flex;align-items:center;justify-content:center;gap:5px;margin-left:auto;background:#202b35;color:#edf4f8;border:1px solid #3a4853;border-radius:6px;padding:7px 10px;font-weight:750;font-size:11px;white-space:nowrap}
+.chart-head{display:flex;align-items:center;gap:8px}
+.chart-float-controls{display:none}
+@media(max-width:600px){
+ body{background:#0c1116;color:#e8edf2}
+ .top,.account{background:#111820;color:#e8edf2;border-color:#26323c}
+ .connection{color:#2bd4a4}
+ .account label,.market .sub{color:#8c9aa7}
+ .market{background:#10171e;color:#eef3f7;border-bottom:1px solid #26323c}
+ .toolbar{background:#111820;border-color:#26323c}
+ .tf{background:#1b252e;color:#b9c6d0;border-radius:5px}
+ .tf.active{background:#2869cf;color:#fff;box-shadow:none}
+ .chartbox{background:#0b1015}
+ .chart-head{background:#111820;color:#e7eef5;border-bottom:1px solid #293640;height:34px;padding:0 9px}
+ .live-chart{height:clamp(440px,66dvh,680px);min-height:440px;background:#0b1015}
+ .price-strip{background:#26323c}
+ .quote.sell{background:#d94452}.quote.buy{background:#07896f}
+ .quote label{font-size:10px}.quote strong{font-size:18px}
+ .footer-nav{background:#111820;border-color:#26323c}
+ .navbtn{color:#9eabb7}.navbtn.active{color:#56a0ff}
+ body.chart-focus{overflow:hidden;background:#080c10}
+ body.chart-focus .top,body.chart-focus .account,body.chart-focus .market,body.chart-focus .main-grid>main>.section:nth-child(2),body.chart-focus .trade-column,body.chart-focus .footer-nav,body.chart-focus .price-strip{display:none!important}
+ body.chart-focus .app{padding:0!important;height:100dvh;min-height:0;overflow:hidden;max-width:none}
+ body.chart-focus .main-grid{height:100dvh;padding:0}
+ body.chart-focus .main-grid>main{height:100dvh;min-height:0}
+ body.chart-focus .main-grid>main>.section:first-child{height:100dvh;min-height:0;display:flex;flex-direction:column;margin:0}
+ body.chart-focus .toolbar{flex:0 0 auto;padding:7px 8px;overflow-x:auto;background:#10171e;border-color:#26343f}
+ body.chart-focus .tf{flex:0 0 auto}
+ body.chart-focus .chartbox{position:relative;flex:1;min-height:0;display:flex;flex-direction:column;background:#0b1015}
+ body.chart-focus .chart-head{height:38px;flex:0 0 38px;background:#121b23;color:#eef4f8}
+ body.chart-focus .chart-head>span:nth-child(2){display:none}
+ body.chart-focus .chart-expand{background:#253440;color:white;border-color:#3b4d5a;padding:6px 9px}
+ body.chart-focus .live-chart{height:auto;min-height:0;flex:1;width:100%;background:#0b1015}
+ body.chart-focus .live-chart iframe{height:100%;min-height:0}
+ body.chart-focus .chart-float-controls{display:flex;position:absolute;z-index:8;top:48px;right:9px;gap:7px}
+ .chart-float-controls button{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:76px;min-height:48px;padding:5px 10px;border-radius:7px;color:#fff;font-size:13px;font-weight:850;box-shadow:0 3px 12px #0008;border:1px solid #ffffff26}
+ .chart-float-controls small{font-size:10px;font-weight:600;margin-top:2px;opacity:.95}
+ .chart-float-controls .float-sell{background:#df4654}.chart-float-controls .float-buy{background:#079878}
+}
+@media(max-width:380px){
+ .chart-float-controls button{min-width:65px;padding:5px 7px}
+ body.chart-focus .chart-head{font-size:10px}
+}
 </style></head>
 <body><div class="app">
 <header class="top"><div class="brand"><div class="logo">P</div><div>PRIME <span style="color:var(--gold)">XAUUSD</span><small>TRADING TERMINAL · DEMO</small></div></div><div class="connection"><span class="dot"></span> DEMO SERVER</div></header>
@@ -151,7 +196,7 @@ td{font-size:12px;font-weight:500}
 <div class="main-grid"><main>
 <section class="section" style="margin-top:0"><div class="market"><div><div class="symbol">🟡 XAUUSD <span class="badge">GOLD</span></div><div class="sub">Gold vs US Dollar · Simulated feed</div></div><div class="price"><span id="mainPrice">2,650.00</span><div class="sub" id="change">+0.00 (0.00%)</div></div></div>
 <div class="toolbar"><button class="tf active" data-tf="M1">M1</button><button class="tf" data-tf="M5">M5</button><button class="tf" data-tf="M15">M15</button><button class="tf" data-tf="M30">M30</button><button class="tf" data-tf="H1">H1</button><button class="tf" data-tf="H4">H4</button><button class="tf" data-tf="D1">D1</button></div>
-<div class="chartbox"><div class="chart-head"><span id="chartTitle">XAUUSD, M1</span><span>OHLC <span id="ohlc">2650.00 / 2651.20 / 2649.50 / 2650.00</span></span><button class="chart-expand" id="chartExpand" type="button">⛶ Expand</button></div><div class="chart-float-controls"><button class="float-sell" id="floatSell">SELL</button><button class="float-buy" id="floatBuy">BUY</button></div><div class="chart-wrap live-chart"><iframe id="liveChart" title="Live XAUUSD gold chart" src="https://www.tradingview.com/widgetembed/?frameElementId=tv_xauusd&symbol=OANDA%3AXAUUSD&interval=1&hidesidetoolbar=1&symboledit=0&saveimage=0&toolbarbg=%230e1216&studies=MACD%40tv-basicstudies&theme=dark&style=1&timezone=Etc%2FUTC&withdateranges=1&hideideas=1&allow_symbol_change=0&details=0&hotlist=0&calendar=0&locale=en" loading="lazy" allowtransparency="true" frameborder="0"></iframe></div></div>
+<div class="chartbox"><div class="chart-head"><span id="chartTitle">XAUUSD, M1</span><span>OHLC <span id="ohlc">2650.00 / 2651.20 / 2649.50 / 2650.00</span></span><button class="chart-expand" id="chartExpand" type="button">⛶ Expand</button></div><div class="chart-float-controls"><button class="float-sell" id="floatSell">SELL<small id="floatSellPrice">2,649.90</small></button><button class="float-buy" id="floatBuy">BUY<small id="floatBuyPrice">2,650.10</small></button></div><div class="chart-wrap live-chart"><iframe id="liveChart" title="Live XAUUSD gold chart" src="https://www.tradingview.com/widgetembed/?frameElementId=tv_xauusd&symbol=OANDA%3AXAUUSD&interval=1&hidesidetoolbar=1&symboledit=0&saveimage=0&toolbarbg=%230e1216&studies=MACD%40tv-basicstudies&theme=dark&style=1&timezone=Etc%2FUTC&withdateranges=1&hideideas=1&allow_symbol_change=0&details=0&hotlist=0&calendar=0&locale=en" loading="lazy" allowtransparency="true" frameborder="0"></iframe></div></div>
 <div class="price-strip"><button class="quote sell" id="sellQuote"><label>SELL / BID</label><strong id="bid">2,649.90</strong><span>Spread <b id="spread">0.20</b></span></button><button class="quote buy" id="buyQuote"><label>BUY / ASK</label><strong id="ask">2,650.10</strong><span>Market execution</span></button></div></section>
 <section class="section"><div class="section-title"><span>Trade <small>· New order</small></span><span class="badge">VIRTUAL</span></div><div class="order-form">
 <div class="field"><label>SYMBOL</label><select disabled><option>XAUUSD · Gold</option></select></div>
@@ -186,12 +231,13 @@ function renderTrades(){let p=$('positions');p.innerHTML='';if(!trades.length)p.
 function toast(s){let el=$('toast');el.textContent=s;el.style.display='block';clearTimeout(toast.timer);toast.timer=setTimeout(()=>el.style.display='none',2200)}
 function openTrade(type){let lots=+$('lots').value,sl=+$('sl').value||null,tp=+$('tp').value||null;if(sl&&((type==='BUY'&&sl>=price)||(type==='SELL'&&sl<=price))){toast('Check Stop Loss price');return}if(tp&&((type==='BUY'&&tp<=price)||(type==='SELL'&&tp>=price))){toast('Check Take Profit price');return}trades.push({id:Date.now(),type,lots,open:type==='BUY'?ask():bid(),sl,tp});renderTrades();toast(type+' XAUUSD '+lots.toFixed(2)+' lot opened (demo)')}
 function closeTrade(id){let i=trades.findIndex(t=>t.id===id);if(i<0)return;let t=trades.splice(i,1)[0],pl=pnl(t);balance+=pl;history.push({...t,close:price,pl});renderTrades();toast('Position closed · '+money(pl))}
-function updatePrice(){tick++;let old=price;price=Math.max(2300,price+(Math.random()-.495)*.85);let last=candles[candles.length-1];last.c=price;last.h=Math.max(last.h,price);last.l=Math.min(last.l,price);if(tick%5===0){let o=price;price+= (Math.random()-.5)*1.2;candles.push({o,h:Math.max(o,price)+Math.random()*.6,l:Math.min(o,price)-Math.random()*.6,c:price});if(candles.length>70)candles.shift()}$('mainPrice').textContent=fmt(price);$('bid').textContent=fmt(bid());$('ask').textContent=fmt(ask());$('sellBtnPrice').textContent=fmt(bid());$('buyBtnPrice').textContent=fmt(ask());$('qBid').textContent=fmt(bid());$('qAsk').textContent=fmt(ask());$('qSpread').textContent='0.20';$('spread').textContent='0.20';$('change').textContent=(price-startPrice>=0?'+':'')+fmt(price-startPrice)+' ('+((price-startPrice)/startPrice*100).toFixed(2)+'%)';$('change').className='sub '+(price>=startPrice?'up':'down');let l=candles[candles.length-1];$('ohlc').textContent=[l.o,l.h,l.l,l.c].map(fmt).join(' / ');trades.slice().forEach(t=>{if(t.sl&&((t.type==='BUY'&&price<=t.sl)||(t.type==='SELL'&&price>=t.sl)))closeTrade(t.id);else if(t.tp&&((t.type==='BUY'&&price>=t.tp)||(t.type==='SELL'&&price<=t.tp)))closeTrade(t.id)});renderStats();draw()}
+function updatePrice(){tick++;let old=price;price=Math.max(2300,price+(Math.random()-.495)*.85);let last=candles[candles.length-1];last.c=price;last.h=Math.max(last.h,price);last.l=Math.min(last.l,price);if(tick%5===0){let o=price;price+= (Math.random()-.5)*1.2;candles.push({o,h:Math.max(o,price)+Math.random()*.6,l:Math.min(o,price)-Math.random()*.6,c:price});if(candles.length>70)candles.shift()}$('mainPrice').textContent=fmt(price);$('bid').textContent=fmt(bid());$('ask').textContent=fmt(ask());$('sellBtnPrice').textContent=fmt(bid());$('buyBtnPrice').textContent=fmt(ask());$('qBid').textContent=fmt(bid());$('qAsk').textContent=fmt(ask());$('qSpread').textContent='0.20';$('spread').textContent='0.20';if($('floatSellPrice'))$('floatSellPrice').textContent=fmt(bid());if($('floatBuyPrice'))$('floatBuyPrice').textContent=fmt(ask());$('change').textContent=(price-startPrice>=0?'+':'')+fmt(price-startPrice)+' ('+((price-startPrice)/startPrice*100).toFixed(2)+'%)';$('change').className='sub '+(price>=startPrice?'up':'down');let l=candles[candles.length-1];$('ohlc').textContent=[l.o,l.h,l.l,l.c].map(fmt).join(' / ');trades.slice().forEach(t=>{if(t.sl&&((t.type==='BUY'&&price<=t.sl)||(t.type==='SELL'&&price>=t.sl)))closeTrade(t.id);else if(t.tp&&((t.type==='BUY'&&price>=t.tp)||(t.type==='SELL'&&price<=t.tp)))closeTrade(t.id)});renderStats();draw()}
 function draw(){let c=$('chart');if(!c)return;let rect=c.getBoundingClientRect(),dpr=window.devicePixelRatio||1;if(!rect.width||!rect.height)return;c.width=rect.width*dpr;c.height=rect.height*dpr;let x=c.getContext('2d');x.scale(dpr,dpr);let w=rect.width,h=rect.height;x.fillStyle='#11171b';x.fillRect(0,0,w,h);let vals=candles.flatMap(k=>[k.h,k.l]),max=Math.max(...vals)+.6,min=Math.min(...vals)-.6,range=max-min;const y=v=>h-20-(v-min)/range*(h-38);x.strokeStyle='#29343b';x.lineWidth=1;for(let i=0;i<6;i++){let yy=10+(h-30)*i/5;x.beginPath();x.moveTo(0,yy);x.lineTo(w,yy);x.stroke();x.fillStyle='#75818a';x.font='10px Arial';x.fillText(fmt(max-(range*i/5)),w-58,yy-3)}for(let i=0;i<7;i++){let xx=w*i/6;x.beginPath();x.moveTo(xx,0);x.lineTo(xx,h);x.stroke()}let step=(w-65)/candles.length,cw=Math.max(3,step*.57);candles.forEach((k,i)=>{let xx=i*step+3,up=k.c>=k.o,col=up?'#20c997':'#ff5b69';x.strokeStyle=col;x.fillStyle=col;x.beginPath();x.moveTo(xx+cw/2,y(k.h));x.lineTo(xx+cw/2,y(k.l));x.stroke();let top=Math.min(y(k.o),y(k.c)),bh=Math.max(1.5,Math.abs(y(k.o)-y(k.c)));x.fillRect(xx,top,cw,bh)});let py=y(price);x.setLineDash([4,3]);x.strokeStyle='#f2c14e';x.beginPath();x.moveTo(0,py);x.lineTo(w,py);x.stroke();x.setLineDash([]);x.fillStyle='#f2c14e';x.fillRect(w-62,py-8,60,16);x.fillStyle='#171d22';x.font='bold 10px Arial';x.fillText(fmt(price),w-59,py+3)}
 document.querySelectorAll('[data-tf]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-tf]').forEach(a=>a.classList.remove('active'));b.classList.add('active');timeframe=b.dataset.tf;$('chartTitle').textContent='XAUUSD, '+timeframe;toast('Chart timeframe: '+timeframe)}));
 $('sellBtn').onclick=()=>openTrade('SELL');$('buyBtn').onclick=()=>openTrade('BUY');$('sellQuote').onclick=()=>openTrade('SELL');$('buyQuote').onclick=()=>openTrade('BUY');$('positions').onclick=e=>{let b=e.target.closest('[data-close]');if(b)closeTrade(+b.dataset.close)};
 document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-view]').forEach(a=>a.classList.toggle('active',a===b));document.querySelectorAll('.view').forEach(v=>v.classList.toggle('active',v.id==='view-'+b.dataset.view))}));
-function setChartFocus(on){document.body.classList.toggle('chart-focus',on);$('chartExpand').textContent=on?'✕ Close':'⛶ Expand';if(on){document.querySelector('.chartbox').scrollIntoView({block:'start'});setTimeout(()=>window.dispatchEvent(new Event('resize')),120)}}
+function setChartFocus(on){document.body.classList.toggle('chart-focus',on);$('chartExpand').textContent=on?'✕ Close':'⛶ Full screen';if(on){setTimeout(()=>window.dispatchEvent(new Event('resize')),120)}}
+ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.body.classList.contains('chart-focus'))setChartFocus(false)});
  $('chartExpand').onclick=()=>setChartFocus(!document.body.classList.contains('chart-focus'));$('floatSell').onclick=()=>openTrade('SELL');$('floatBuy').onclick=()=>openTrade('BUY');
  document.querySelectorAll('[data-nav]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-nav]').forEach(a=>a.classList.toggle('active',a===b));let n=b.dataset.nav;if(n==='trade'){document.querySelector('[data-view="positions"]').click();document.querySelector('.trade-column').scrollIntoView({behavior:'smooth',block:'start'})}else if(n==='history'){document.querySelector('[data-view="history"]').click();document.querySelector('.trade-column').scrollIntoView({behavior:'smooth',block:'start'})}else if(n==='quotes'){document.querySelector('[data-view="quotes"]').click();document.querySelector('.trade-column').scrollIntoView({behavior:'smooth',block:'start'})}else if(n==='chart'){setChartFocus(true)}else toast('Demo settings · virtual account only')}));
 $('reset').onclick=()=>{if(confirm('Reset demo balance to $10,000 and clear all trades?')){balance=10000;trades=[];history=[];startPrice=2650;seed();renderTrades();toast('Demo account reset')}};
