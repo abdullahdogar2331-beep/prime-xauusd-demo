@@ -80,8 +80,8 @@ td{font-size:12px;font-weight:500}
 @media(max-width:420px){body{font-size:14px}.balance{font-size:21px}.price{font-size:19px}.quote strong{font-size:18px}.field input,.field select{font-size:14px}}
 
 /* MT5-inspired compact mobile terminal with an embedded live XAUUSD chart */
-.live-chart{height:clamp(390px,64vh,620px);padding:0;overflow:hidden;background:#fff}
-.live-chart iframe{width:100%;height:100%;border:0;display:block}
+.live-chart{height:clamp(460px,72vh,700px);padding:0;overflow:hidden;background:#fff;min-height:460px}
+.live-chart iframe{width:100%;height:100%;min-height:100%;border:0;display:block;background:#fff}
 @media(max-width:600px){
  body{background:#fff;color:#171a1d;font-size:12px}
  .app{padding-bottom:58px;max-width:none}
@@ -97,8 +97,8 @@ td{font-size:12px;font-weight:500}
  .symbol{font-size:13px}.market .sub{font-size:10px;color:#59636b}
  .price{font-size:16px}.toolbar{padding:4px 7px;background:#fff;border-bottom:1px solid #e0e3e6;gap:3px}
  .tf{color:#4b5359;padding:5px 8px;font-size:11px}.tf.active{background:#edf0f2;color:#20252a;box-shadow:inset 0 -2px 0 #3478f6}
- .chartbox{padding:0;background:#fff}.chart-head{height:23px;background:#fff;color:#69737b;font-size:9px;padding:0 8px}
- .live-chart{height:clamp(390px,61vh,560px);background:#fff}
+ .chartbox{padding:0;background:#fff}.chart-head{height:25px;background:#fff;color:#37424a;font-size:10px;font-weight:600;padding:0 8px}
+ .live-chart{height:clamp(470px,68vh,620px);min-height:470px;background:#fff}
  .price-strip{position:relative;z-index:2;padding:0;gap:1px;background:#d9dde0;grid-template-columns:1fr 1fr}
  .quote{border-radius:0;padding:7px 4px}.quote.sell{background:#e34f55}.quote.buy{background:#2d9f91}
  .quote label{font-size:9px;margin-bottom:2px}.quote strong{font-size:17px}.quote span{font-size:9px}
