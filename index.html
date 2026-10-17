@@ -248,6 +248,49 @@ button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid 
 .brand small{font-family:Inter,"Segoe UI",Arial,sans-serif!important;font-size:10px!important;font-weight:700!important;letter-spacing:1.05px!important;line-height:1.4;color:#b4c0ca!important}
 @media(max-width:600px){.connection{font-size:11px!important;letter-spacing:.1px!important}.brand small{font-size:10px!important}}
 
+
+/* Mobile-first clarity pass: essential controls stay visible and easy to find */
+@media(max-width:600px){
+  .app{padding-bottom:126px!important}
+  .top{height:48px;padding:0 12px}
+  .brand{gap:8px;font-size:13px}
+  .connection{font-size:10px!important}
+  .account{padding:9px 12px}
+  .balance{font-size:19px!important}
+  .market{padding:8px 12px}
+  .symbol{font-size:14px}
+  .price{font-size:18px!important}
+  .chart-head{height:32px}
+  .live-chart{height:42dvh!important;min-height:290px!important;max-height:410px}
+  .price-strip{
+    position:fixed!important;left:0;right:0;bottom:53px;z-index:15;
+    display:grid!important;grid-template-columns:1fr 1fr;gap:2px;
+    padding:5px;background:#0c1218;border-top:1px solid #2a3742;
+    box-shadow:0 -5px 18px #0003
+  }
+  .price-strip .quote{min-height:54px;padding:7px 5px;border-radius:6px}
+  .price-strip .quote label{font-size:10px;margin-bottom:3px}
+  .price-strip .quote strong{font-size:17px}
+  .price-strip .quote span{font-size:9px}
+  .footer-nav{position:fixed!important;bottom:0;left:0;right:0;z-index:16}
+  .footer-inner{max-width:none}
+  .navbtn{flex:1;padding:6px 3px 5px;min-height:48px}
+  .navbtn .ico{font-size:17px}
+  .main-grid>main>.section:nth-child(2){margin-top:8px!important}
+  .order-form{gap:8px;padding:10px}
+  .field input,.field select{min-height:40px}
+  .trade-buttons{gap:8px}
+  .trade-btn{min-height:48px}
+  .tabs{position:sticky;top:48px;z-index:4}
+  .chart-expand{padding:6px 8px;font-size:10px}
+}
+@media(max-width:380px){
+  .connection{font-size:9px!important}
+  .live-chart{height:38dvh!important;min-height:270px!important}
+  .price-strip .quote strong{font-size:15px}
+  .navbtn{font-size:9px}
+}
+
 </style></head>
 <body><div class="app">
 <header class="top"><div class="brand"><div class="logo" aria-label="Prime XAUUSD logo"><svg viewBox="0 0 40 40" role="img" aria-hidden="true"><defs><linearGradient id="primeGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#ffe6a0"/><stop offset="48%" stop-color="#f2c14e"/><stop offset="100%" stop-color="#c58a20"/></linearGradient></defs><path d="M20 2.8 35.5 11.4 35.5 28.6 20 37.2 4.5 28.6 4.5 11.4Z" fill="#111820" stroke="url(#primeGold)" stroke-width="1.5"/><path d="M10 25.8 16.3 12.8 22.4 23.1 27 15.3 31 25.8" fill="none" stroke="url(#primeGold)" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 29h14" stroke="#f2c14e" stroke-width="2" stroke-linecap="round"/></svg></div><div>PRIME <span style="color:var(--gold)">XAUUSD</span><small>TRADING TERMINAL · DEMO</small></div></div><div class="connection"><span class="dot"></span> DEMO SERVER</div></header>
