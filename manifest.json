@@ -1,0 +1,11 @@
+{
+  "name": "Prime XAUUSD Demo Trading",
+  "short_name": "Prime XAUUSD",
+  "description": "Practice gold trading with virtual money only.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#090d12",
+  "theme_color": "#090d12",
+  "icons": []
+}
